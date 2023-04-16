@@ -283,6 +283,7 @@ export async function main(): Promise<void> {
 
         core.setOutput('upload_url', release.data.upload_url);
         core.setOutput('release_id', release.data.id);
+        core.setOutput('changelog', changelog);
 
     } catch (error) {
         core.setFailed((error as Error).message);
