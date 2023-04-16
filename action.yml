@@ -23,6 +23,13 @@ inputs:
     required: false
     description: If enabled, when a new non-prerelease tag is pushed, the changelog will be created between the pushed tag, and the last non-prerelease tag
     default: 'false'
+outputs:
+  automatic_releases_tag:
+    description: "The release tag this action just processed"
+  upload_url:
+    description: "The URL for uploading additional assets to the release"
+  changelog:
+    description: "The generated changelog text string"
 runs:
   using: 'node12'
   main: 'dist/main.js'
